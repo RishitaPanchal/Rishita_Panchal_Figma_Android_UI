@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicsApp">
         <activity
+            android:name=".home.screen.ui.BottomNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.screen.ui.HomeScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".home.screen.HomeScreenActivity"
             android:exported="false" />
         <activity

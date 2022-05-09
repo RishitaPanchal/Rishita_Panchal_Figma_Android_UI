@@ -12,7 +12,7 @@
     <color name="grayColor">#717784</color>
     <color name="primaryColor">#199A8E</color>
     <color name="inactiveDashColor">#8CEBE2</color>
-    <color name="trans">#00000000 </color>
+    <color name="trans">#00000000</color>
 
     <!-- Onboarding screen -->
     <!-- gradient color -->
@@ -36,4 +36,9 @@
 
     <!-- Home screen color -->
     <color name="blackHomeTitle">#101623</color>
+    <color name="backgroundColor">#FBFBFB</color>
+    <color name="homeCardBackground">#E8F3F1</color>
+    <color name="dateGrayColor">#ADADAD</color>
+    <color name="searchViewBackground">#FBFBFB</color>
+    <color name="searchviewBorder">#E8F3F1</color>
 </resources>
