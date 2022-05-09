@@ -37,6 +37,22 @@
         <item name="boxCornerRadiusTopStart">@dimen/_22sdp</item>
     </style>
 
+    <!-- OTP Edittext style -->
+    <style name="App_OTPEdittextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="background">@color/grayColor</item>
+        <item name="hintTextColor">@color/grayTextColor</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@color/otp_edittext_background</item>
+        <item name="boxBackgroundColor">@color/grayEditTextBackground</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:gravity">center</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_8sdp</item>
+    </style>
+
     <!--Button style -->
     <style name="App_ButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
         <item name="cornerRadius">@dimen/_20sdp</item>
@@ -45,5 +61,12 @@
         <item name="iconTint">@null</item>
     </style>
 
+    <!-- Custom segment control -->
+    <style name="App_SegmentButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_weight">1</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 </resources>

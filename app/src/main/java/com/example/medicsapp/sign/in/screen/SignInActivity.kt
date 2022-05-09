@@ -1,5 +1,6 @@
 package com.example.medicsapp.sign.`in`.screen
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.*
@@ -9,6 +10,8 @@ import android.widget.EditText
 import android.widget.TextView
 import com.example.medicsapp.R
 import com.example.medicsapp.databinding.ActivitySignInBinding
+import com.example.medicsapp.forgot.password.screen.CreatePasswordActivity
+import com.example.medicsapp.forgot.password.screen.ForgotPasswordActivity
 import com.example.medicsapp.signn.up.screen.SignUpActivity
 import com.google.android.material.textfield.TextInputLayout
 
@@ -49,6 +52,8 @@ class SignInActivity : BaseActivity(), View.OnClickListener {
                     )
                 }
             }
+            binding.txtPassword.id -> startActivity(Intent(this, ForgotPasswordActivity::class.java))
+            binding.signInWithFacebook.id -> startActivity(Intent(this, CreatePasswordActivity::class.java))
         }
     }
 

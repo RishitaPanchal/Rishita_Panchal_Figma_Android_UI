@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicsApp">
         <activity
+            android:name=".home.screen.HomeScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgot.password.screen.OtpVerificationScreen"
+            android:exported="false" />
+        <activity
+            android:name=".forgot.password.screen.CreatePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgot.password.screen.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".signn.up.screen.SignUpActivity"
             android:exported="false" />
         <activity

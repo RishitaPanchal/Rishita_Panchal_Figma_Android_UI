@@ -54,6 +54,7 @@
 
     <!-- OTP screen -->
     <string name="verification_subtitle_start_string">Enter code that we have sent to your number</string>
+    <string name="resend">Resend</string>
 
     <!-- Home sxreen -->
     <string name="find_your_desire_health_solution">Find your desire health solution</string>

@@ -22,10 +22,18 @@
 
     <!-- textcolor -->
     <color name="grayTextColor">#101623</color>
+    <color name="blackTextFieldColor">#101623</color>
     <color name="redErrorColor">#FF5C5C</color>
     <color name="grayEditTextBackground">#F9FAFB</color>
     <color name="boxStrokeDefaultColor">#E5E7EB</color>
     <color name="grayORTextColor">#A1A8B0</color>
     <color name="grayDontHaveAccountColor">#717784</color>
     <color name="primarySignupColor">#199A8E</color>
+
+    <!-- forgot password -->
+    <color name="grayForgotPasswordTitle">#101623</color>
+    <color name="grayFogotPasswordSubTitle">#A1A8B0</color>
+
+    <!-- Home screen color -->
+    <color name="blackHomeTitle">#101623</color>
 </resources>
