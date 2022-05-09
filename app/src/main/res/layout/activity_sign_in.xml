@@ -8,7 +8,6 @@
         <variable
             name="onClick"
             type="android.view.View.OnClickListener" />
-
     </data>
 
     <ScrollView
@@ -21,6 +20,21 @@
             android:id="@+id/constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_100sdp"
+                android:progressTint="@color/primaryColor"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_100sdp"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sign_in_with_facebook" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -226,7 +240,6 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:fontFamily="@font/inter_semi_bold"
-                android:onClick="@{onClick.onClick}"
                 android:paddingStart="@dimen/_20sdp"
                 android:text="@string/sign_in_with_google"
                 android:textAllCaps="false"

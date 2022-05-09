@@ -31,7 +31,9 @@
     <string name="sign_up">Sign Up</string>
     <string name="terms_and_condition">Terms of Service</string>
     <string name="privacy_and_policy">Privacy Policy</string>
-
+    <string name="signup_name">eve</string>
+    <string name="sign_up_email">eve.holt@reqres.in</string>
+    <string name="sign_up_password">pistol</string>
     <!-- Forgot password screen -->
     <string name="phone">Enter your Phone</string>
     <string name="forgot_your_password">Forgot Your Password?</string>

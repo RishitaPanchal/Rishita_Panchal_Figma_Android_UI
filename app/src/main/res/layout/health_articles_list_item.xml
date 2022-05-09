@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:fontFamily="@font/inter_semi_bold"
             android:text="@string/traditional_herbal_medicine_treatments_for_covid_19"
             android:textSize="@dimen/_10ssp"
