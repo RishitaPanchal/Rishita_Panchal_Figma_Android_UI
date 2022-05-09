@@ -41,4 +41,7 @@
     <color name="dateGrayColor">#ADADAD</color>
     <color name="searchViewBackground">#FBFBFB</color>
     <color name="searchviewBorder">#E8F3F1</color>
+
+    <!-- See all doctors -->
+    <color name="grayDoctorOccupationColor">#ADADAD</color>
 </resources>

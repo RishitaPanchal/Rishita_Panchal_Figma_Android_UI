@@ -1,5 +1,6 @@
 package com.example.medicsapp.home.screen.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,8 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medicsapp.R
 import com.example.medicsapp.databinding.ActivityHomeScreenBinding
 import com.example.medicsapp.databinding.FragmentHomeBinding
+import com.example.medicsapp.see.all.doctors.SeeAllDoctorsActivity
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), View.OnClickListener {
 
     /** Instance variables */
     private lateinit var binding: FragmentHomeBinding
@@ -29,6 +31,7 @@ class HomeFragment : Fragment() {
         setUpDoctorsData()
         initArticlesData()
         setUpArticlesData()
+        binding.onClick = this
         return binding.root
     }
 
@@ -57,6 +60,12 @@ class HomeFragment : Fragment() {
         binding.recyclerViewArticles.layoutManager = horizontalLayout
         val itemAdapter = HealthArticlesAdapter(healthArticlesData)
         binding.recyclerViewArticles.adapter = itemAdapter
+    }
+
+    override fun onClick(p0: View?) {
+        when (p0?.id) {
+            binding.txtSeeAllDoctor.id -> startActivity(Intent(context, SeeAllDoctorsActivity::class.java))
+        }
     }
 
 }
