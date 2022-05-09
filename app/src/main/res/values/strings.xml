@@ -53,7 +53,6 @@
     <string name="didn_t_receive_the_code_resend">Didn’t receive the code? Resend</string>
     <string name="verify">Verify</string>
 
-
     <!-- OTP screen -->
     <string name="verification_subtitle_start_string">Enter code that we have sent to your number</string>
     <string name="resend">Resend</string>
@@ -91,6 +90,8 @@
     <string name="article_two_title">Traditional Herbal Medicine Treatments for COVID-19</string>
     <string name="article_three_title">Beauty Tips For Face: 10 Dos and Donts for Naturally Beautiful Skin</string>
 
+    <!--  Web services-->
+    <string name="retrofit_error_message">Oops! Something went wrong…</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

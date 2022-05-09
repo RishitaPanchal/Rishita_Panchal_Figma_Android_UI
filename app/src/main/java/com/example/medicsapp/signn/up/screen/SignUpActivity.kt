@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
@@ -13,8 +12,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.medicsapp.R
 import com.example.medicsapp.databinding.ActivitySignUpBinding
 import com.example.medicsapp.sign.`in`.screen.*
+import com.example.medicsapp.webservices.httpurlconnection.APICallingType
 import com.example.medicsapp.webservices.httpurlconnection.SignInSignUpViewModel
-import org.json.JSONObject
 
 class SignUpActivity : BaseActivity(), View.OnClickListener {
 
@@ -50,12 +49,7 @@ class SignUpActivity : BaseActivity(), View.OnClickListener {
         when (p0?.id) {
             binding.btnLogin.id -> {
                 if (binding.tfUser.text.toString() != "" && binding.tfEmail.text.toString() != "" && binding.tfPassword.text.toString() != "") {
-                    Log.d("msg", "clicked")
-                    val credentials = JSONObject()
-                    credentials.put("email", binding.tfEmail.text.toString())
-                    credentials.put("password", binding.tfPassword.text.toString())
-                    binding.progressBar.visibility = View.VISIBLE
-                    viewModel.createUserByHttp(credentials)
+                    viewModel.selectCreateUserAPICallingType(APICallingType, binding.tfUser.text.toString(), binding.tfEmail.text.toString(), binding.tfPassword.text.toString())
                 } else {
                     Toast.makeText(this, "Not Empty fields", Toast.LENGTH_LONG).show()
                 }

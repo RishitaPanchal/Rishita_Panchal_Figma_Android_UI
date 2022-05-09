@@ -17,9 +17,9 @@ import com.example.medicsapp.forgot.password.screen.CreatePasswordActivity
 import com.example.medicsapp.forgot.password.screen.ForgotPasswordActivity
 import com.example.medicsapp.home.screen.ui.BottomNavigationActivity
 import com.example.medicsapp.signn.up.screen.SignUpActivity
+import com.example.medicsapp.webservices.httpurlconnection.APICallingType
 import com.example.medicsapp.webservices.httpurlconnection.SignInSignUpViewModel
 import com.google.android.material.textfield.TextInputLayout
-import org.json.JSONObject
 
 class SignInActivity : BaseActivity(), View.OnClickListener {
 
@@ -49,11 +49,7 @@ class SignInActivity : BaseActivity(), View.OnClickListener {
                     isEmptyFields(binding.tfEmail, binding.tlEmail, binding.txtErrorEmail, getString(R.string.fields_should_not_empty))
                     isEmptyFields(binding.tfPassword, binding.tlPassowrd, binding.txtErrorPassword, getString(R.string.fields_should_not_empty))
                 } else {
-                    binding.progressBar.visibility = View.VISIBLE
-                    val credentials = JSONObject()
-                    credentials.put("email", binding.tfEmail.text.toString())
-                    credentials.put("password", binding.tfPassword.text.toString())
-                    viewModel.authenticateUserByHttp(credentials)
+                    viewModel.selectAuthenticateAPICallingType(APICallingType, binding.tfEmail.text.toString(), binding.tfPassword.text.toString())
                 }
             }
             binding.txtPassword.id -> startActivity(Intent(this, ForgotPasswordActivity::class.java))
@@ -62,7 +58,6 @@ class SignInActivity : BaseActivity(), View.OnClickListener {
         }
     }
 
-    /*** Functions */
     private fun observeValueFromVM() {
         viewModel = ViewModelProvider(this)[SignInSignUpViewModel::class.java]
         viewModel.succeedAuthenticateUser.observe(this) {

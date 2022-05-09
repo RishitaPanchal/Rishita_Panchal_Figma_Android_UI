@@ -7,6 +7,7 @@ interface APIHttpResponder<SUCCESS, ERROR> {
 }
 
 /** Modal classes*/
+// Sign up modal classes
 class SignUpModelClass (
     val name: String,
     val email: String,

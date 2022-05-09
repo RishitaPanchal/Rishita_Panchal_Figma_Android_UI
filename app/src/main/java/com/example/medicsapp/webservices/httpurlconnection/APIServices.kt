@@ -1,33 +1,46 @@
 package com.example.medicsapp.webservices.httpurlconnection
 
 import android.util.Log
+import com.example.medicsapp.websercicess.retrofit.APIRetrofitResponder
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
 import java.net.URL
 
+var APICallingType = APIServices.RetrofitOrHttpUrlConnection.Retrofit.name
+
 class APIServices {
 
-    /** Enum classes */
+    object APIEndPoints {
+        const val register = "register"
+        const val login = "login"
+    }
+
     enum class APIUrls {
         SignupPostData, SignInPostData
     }
 
     enum class ResponseCode(val responseCode: Int) {
         RESPONSE_OK(200),
-        RESPONSE_FAILED(400),
+        RESPONSE_FAILED(400)
     }
 
-    /** Companion object */
+    enum class RetrofitOrHttpUrlConnection {
+        Retrofit, HttpUrlConnection
+    }
+
     companion object {
 
-        private const val baseUrl = "https://reqres.in/api/"
+        const val baseUrl = "https://reqres.in/api/"
 
-        /** Functions */
         private fun urlMethod(task: APIUrls): String {
             return when (task) {
                 APIUrls.SignupPostData -> "POST"
@@ -86,6 +99,30 @@ class APIServices {
             }
         }
 
+        private fun <T> retrofitEnqueue(
+            call: Call<T>,
+            result: APIRetrofitResponder<T, ErrorModel>
+        ) {
+            val type = object : TypeToken<ErrorModel>() {}.type
+            call.enqueue(object : Callback<T> {
+                override fun onResponse(call: Call<T>, response: Response<T>) {
+                    when(response.code()) {
+                        ResponseCode.RESPONSE_OK.responseCode -> result.onSuccess(response.body())
+                        ResponseCode.RESPONSE_FAILED.responseCode -> {
+                            response.errorBody().let {
+                                val errorResponse: ErrorModel =
+                                    Gson().fromJson(response.errorBody()?.charStream(), type)
+                                result.onFailure(errorResponse)
+                            }
+                        }
+                    }
+                }
+                override fun onFailure(call: Call<T>, t: Throwable) {
+                    result.onFailure("Something went wrong!")
+                }
+            })
+        }
+
         fun createUserHttp(
             jsonObject: JSONObject,
             resultHttp: APIHttpResponder<SignUpResponseData, ErrorModel>
@@ -99,12 +136,32 @@ class APIServices {
             )
         }
 
+        fun createUserRetrofit(
+            signUpModelClass: SignUpModelClass,
+            result: APIRetrofitResponder<SignUpResponseData, ErrorModel>
+        ) {
+            retrofitEnqueue(
+                APIRetrofitClient.retrofitBuilder.postSignUpData(signUpModelClass),
+                result
+            )
+        }
+
         fun authenticateUser(jsonObject: JSONObject, result: APIHttpResponder<SignInData, ErrorModel>) {
             httpRequest(
                 SignInData::class.java,
                 apiUrl(APIUrls.SignInPostData),
                 urlMethod(APIUrls.SignInPostData),
                 jsonObject,
+                result
+            )
+        }
+
+        fun authenticateUserRetrofit(
+            signInModelClass: SignInModelClass,
+            result: APIRetrofitResponder<SignInData, ErrorModel>
+        ) {
+            retrofitEnqueue(
+                APIRetrofitClient.retrofitBuilder.postSignInData(signInModelClass),
                 result
             )
         }
