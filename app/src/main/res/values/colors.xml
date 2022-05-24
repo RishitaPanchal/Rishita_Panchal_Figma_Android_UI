@@ -16,9 +16,16 @@
 
     <!-- Onboarding screen -->
     <!-- gradient color -->
+    <color name="grayLine">#E5E7EB</color>
     <color name="gradientTop">#F5FFF6</color>
     <color name="gradientBottom">#F5F7FF</color>
 
     <!-- textcolor -->
     <color name="grayTextColor">#101623</color>
+    <color name="redErrorColor">#FF5C5C</color>
+    <color name="grayEditTextBackground">#F9FAFB</color>
+    <color name="boxStrokeDefaultColor">#E5E7EB</color>
+    <color name="grayORTextColor">#A1A8B0</color>
+    <color name="grayDontHaveAccountColor">#717784</color>
+    <color name="primarySignupColor">#199A8E</color>
 </resources>

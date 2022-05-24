@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.medicsapp.OnBoardingScreen.OnBoardingScreenActivity
 import com.example.medicsapp.R
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class SplashScreenActivity : AppCompatActivity() {
     /*** Function */
     private fun goToOnBoardScreen() {
         Handler(Looper.getMainLooper()).postDelayed({
-            Intent(this, SplashScreenActivity::class.java).apply {
+            Intent(this, OnBoardingScreenActivity::class.java).apply {
                 startActivity(this)
             }
             finish()

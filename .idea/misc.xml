@@ -5,15 +5,18 @@
       <map>
         <entry key="app/src/main/res/drawable/indicator_active.xml" value="0.122" />
         <entry key="app/src/main/res/drawable/indicator_inactive.xml" value="0.121" />
+        <entry key="app/src/main/res/drawable/launch_screen.xml" value="0.129" />
         <entry key="app/src/main/res/drawable/onboarding_cardview.xml" value="0.1455" />
         <entry key="app/src/main/res/drawable/round_button.xml" value="0.1345" />
         <entry key="app/src/main/res/drawable/round_login_signup_btn.xml" value="0.153" />
         <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.121" />
         <entry key="app/src/main/res/font/.xml" value="0.13595553655408293" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12654980761008977" />
+        <entry key="app/src/main/res/font/inter_bold.xml" value="0.1359375" />
+        <entry key="app/src/main/res/layout/activity_apiselector.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.10560068405301411" />
         <entry key="app/src/main/res/layout/activity_sign_in_screen.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.11500641299700727" />
         <entry key="app/src/main/res/layout/activity_splash_screen2.xml" value="0.15" />
         <entry key="app/src/main/res/layout/item_container_view.xml" value="0.25" />
       </map>

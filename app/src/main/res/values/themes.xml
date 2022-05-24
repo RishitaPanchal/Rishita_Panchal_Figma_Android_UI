@@ -20,5 +20,30 @@
         <item name="colorPrimaryDark">@color/primaryColor</item>
     </style>
 
+    <!-- EditText style -->
+    <style name="App_EdittextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="background">@color/grayColor</item>
+        <item name="hintTextColor">@color/grayTextColor</item>
+        <item name="boxStrokeColor">@color/edittext_background</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/grayEditTextBackground</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_22sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_22sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_22sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_22sdp</item>
+    </style>
+
+    <!--Button style -->
+    <style name="App_ButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="strokeColor">@color/grayLine</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="iconTint">@null</item>
+    </style>
+
 
 </resources>
