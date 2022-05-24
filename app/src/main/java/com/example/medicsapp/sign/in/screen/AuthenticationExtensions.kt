@@ -29,7 +29,6 @@ fun TextInputEditText.emailVerification(
     textView: TextView
 ) {
     editText.doOnTextChanged { _, _, _, _ ->
-
         when {
             Patterns.EMAIL_ADDRESS.matcher(editText.text.toString()).matches() -> {
                 txtLayout.boxStrokeColor = ContextCompat.getColor(context, R.color.primaryColor)
@@ -62,7 +61,6 @@ fun TextInputEditText.passwordVerification(
     txtLayout: TextInputLayout,
     textView: TextView
 ) {
-
     editText.doOnTextChanged { _, _, _, _ ->
         when {
             editText.text.length >= 5 -> {
@@ -102,7 +100,7 @@ fun SpannableString.modifyString(
     val start = entireString.indexOf(subString)
     val end = start + subString.length
     if (clickableSpan) {
-        val clickSpan = object : ClickableSpan() {
+        val clickableSpan = object : ClickableSpan() {
             override fun onClick(p0: View) {
                 startActivity?.startActivity(Intent(startActivity, destinationActivity))
             }
@@ -111,7 +109,7 @@ fun SpannableString.modifyString(
                 ds.isUnderlineText = false
             }
         }
-        this.setSpan(clickSpan, start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        this.setSpan(clickableSpan, start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
     }
     this.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, color)), start, end, 0)
     return this
