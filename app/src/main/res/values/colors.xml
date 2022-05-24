@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary color -->
+    <color name="grayColor">#717784</color>
+    <color name="primaryColor">#199A8E</color>
+    <color name="inactiveDashColor">#8CEBE2</color>
+    <color name="trans">#00000000 </color>
+
+    <!-- Onboarding screen -->
+    <!-- gradient color -->
+    <color name="gradientTop">#F5FFF6</color>
+    <color name="gradientBottom">#F5F7FF</color>
+
+    <!-- textcolor -->
+    <color name="grayTextColor">#101623</color>
 </resources>
