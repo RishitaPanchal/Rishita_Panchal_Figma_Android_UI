@@ -11,8 +11,6 @@
     <string name="goToSignInActivity">Go to sign in activity</string>
     <string name="skipClicked">Skip clicked</string>
 
-    <!-- OnBoarding screen -->
-
     <!-- Login screen -->
     <string name="email">Enter your email</string>
     <string name="password">Enter your password</string>
@@ -26,7 +24,70 @@
     <string name="invalid_password">*Invalid Password</string>
     <string name="invalid_email">*Invalid email</string>
     <string name="fields_should_not_empty">*Fields should not be empty</string>
-    <string name="start_string_no_account">Don’t have an account?</string>
 
+    <!-- Sign up screen -->
+    <string name="usrename">Enter your name</string>
+    <string name="txt_privacy_policy">I agree to the medidoc Terms of Service and Privacy Policy</string>
     <string name="sign_up">Sign Up</string>
+    <string name="terms_and_condition">Terms of Service</string>
+    <string name="privacy_and_policy">Privacy Policy</string>
+
+    <!-- Forgot password screen -->
+    <string name="phone">Enter your Phone</string>
+    <string name="forgot_your_password">Forgot Your Password?</string>
+    <string name="sub_title_forgot_password">Enter your email or your phone number, we will send you confirmation code</string>
+    <string name="email_segment1">Email</string>
+    <string name="phone_segment">Phone</string>
+    <string name="reset_password">Reset Password</string>
+
+    <!-- create new password screen -->
+    <string name="create_new_password">Create New Password</string>
+    <string name="create_new_password_subtitle">Create your new password to login</string>
+    <string name="create_first_password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="create_password">Create Password</string>
+    <string name="enter_verification_code">Enter Verification Code</string>
+    <string name="txt_verification_subtitle">Enter code that we have sent to your number 08528188***</string>
+    <string name="didn_t_receive_the_code_resend">Didn’t receive the code? Resend</string>
+    <string name="verify">Verify</string>
+
+
+    <!-- OTP screen -->
+    <string name="verification_subtitle_start_string">Enter code that we have sent to your number</string>
+
+    <!-- Home sxreen -->
+    <string name="find_your_desire_health_solution">Find your desire health solution</string>
+    <string name="serach_query_hint">Search doctor, drugs, articles...</string>
+    <string name="doctor">Doctor</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="hospital">Hospital</string>
+    <string name="ambulance">Ambulance</string>
+    <string name="early_protection_for_your_family_health">Early protection for your family health</string>
+    <string name="learn_more">Learn More</string>
+    <string name="top_doctor">Top Doctor</string>
+    <string name="see_all">See all</string>
+    <string name="dr_marcus_horizon">Dr. Marcus</string>
+    <string name="chardiologist">Chardiologist</string>
+    <string name="_4_7">4,7</string>
+    <string name="dr_maria_elena">Dr. Maria Elena</string>
+    <string name="psychologist">Psychologist</string>
+    <string name="_4_9">4,9</string>
+    <string name="dr_stevi_jessi">Dr. Stevi Jessi</string>
+    <string name="orthopedist">Orthopedist</string>
+    <string name="_4_8">4,8</string>
+    <string name="health_article">Health article</string>
+    <string name="_800m_away">800m away</string>
+    <string name="traditional_herbal_medicine_treatments_for_covid_19">Traditional Herbal Medicine Treatments for COVID-19</string>
+    <string name="article_one_date">Jun 9, 2021</string>
+    <string name="article_two_date">Jun 10, 2021 </string>
+    <string name="article_three_date">Jun 11, 2021 </string>
+    <string name="article_one_8_min_read">8 min read</string>
+    <string name="article_one_9_min_read">9 min read</string>
+    <string name="article_one_10_min_read">10 min read</string>
+    <string name="article_one_title">The 25 Healthiest Fruits You Can Eat, According to a Nutritionist</string>
+    <string name="article_two_title">Traditional Herbal Medicine Treatments for COVID-19</string>
+    <string name="article_three_title">Beauty Tips For Face: 10 Dos and Donts for Naturally Beautiful Skin</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

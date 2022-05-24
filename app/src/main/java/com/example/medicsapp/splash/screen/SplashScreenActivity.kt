@@ -17,7 +17,7 @@ class SplashScreenActivity : AppCompatActivity() {
         goToOnBoardScreen()
     }
 
-    /*** Function */
+    /*** Functions */
     private fun goToOnBoardScreen() {
         Handler(Looper.getMainLooper()).postDelayed({
             Intent(this, OnBoardingScreenActivity::class.java).apply {

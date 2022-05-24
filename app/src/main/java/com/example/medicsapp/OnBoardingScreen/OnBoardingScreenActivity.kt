@@ -1,12 +1,13 @@
 package com.example.medicsapp.OnBoardingScreen
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
 import com.example.medicsapp.R
 import com.example.medicsapp.databinding.ActivityOnBoardingScreenBinding
 import com.example.medicsapp.sign.`in`.screen.BaseActivity
+import com.example.medicsapp.sign.`in`.screen.SignInActivity
 import com.google.android.material.tabs.TabLayoutMediator
 
 class OnBoardingScreenActivity : BaseActivity(), View.OnClickListener {
@@ -56,11 +57,11 @@ class OnBoardingScreenActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun gotoSignIn() {
-        Toast.makeText(this@OnBoardingScreenActivity, getString(R.string.skipClicked), Toast.LENGTH_LONG).show()
+        startActivity(Intent(this, SignInActivity::class.java))
     }
 
     private fun attachIndicator() {
-        TabLayoutMediator(binding.tabLayout, binding.viewpager) { tab, position ->
+        TabLayoutMediator(binding.tabLayout, binding.viewpager) { _, _ ->
         }.attach()
         binding.viewpager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
@@ -74,11 +75,7 @@ class OnBoardingScreenActivity : BaseActivity(), View.OnClickListener {
         if ((currPos + 1) != onBoardingData.size) {
             binding.viewpager.currentItem = currPos + 1
         } else {
-            Toast.makeText(
-                this@OnBoardingScreenActivity,
-                getString(R.string.goToSignInActivity),
-                Toast.LENGTH_LONG
-            ).show()
+           gotoSignIn()
         }
     }
 
