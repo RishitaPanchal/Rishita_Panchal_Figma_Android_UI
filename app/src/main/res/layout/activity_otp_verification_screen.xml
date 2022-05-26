@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".forgot.password.screen.ForgotPasswordActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_verification_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/enter_verification_code"
+                android:textColor="@color/grayForgotPasswordTitle"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_verification_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_21sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_40ssp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/txt_verification_subtitle"
+                android:textColor="@color/grayFogotPasswordSubTitle"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_verification_title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlInputOne"
+                style="@style/App_OTPEdittextStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:maxHeight="50dp"
+                app:layout_constraintEnd_toStartOf="@id/tlInputTwo"
+                app:layout_constraintStart_toStartOf="@id/txt_verification_subtitle"
+                app:layout_constraintTop_toBottomOf="@id/txt_verification_subtitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfInputOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxHeight="@dimen/_50sdp"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:textColor="@color/blackTextFieldColor"
+                    android:textSize="@dimen/_15ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlInputTwo"
+                style="@style/App_OTPEdittextStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:maxHeight="50dp"
+                app:layout_constraintEnd_toStartOf="@id/tlInputThree"
+                app:layout_constraintStart_toEndOf="@id/tlInputOne"
+                app:layout_constraintTop_toBottomOf="@id/txt_verification_subtitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfInputTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxHeight="@dimen/_50sdp"
+                    android:maxLines="1"
+                    android:textColor="@color/blackTextFieldColor"
+                    android:textSize="@dimen/_15ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlInputThree"
+                style="@style/App_OTPEdittextStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:maxHeight="50dp"
+                app:layout_constraintEnd_toStartOf="@id/tlInputFour"
+                app:layout_constraintStart_toEndOf="@id/tlInputTwo"
+                app:layout_constraintTop_toBottomOf="@id/txt_verification_subtitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfInputThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxHeight="@dimen/_50sdp"
+                    android:maxLines="1"
+                    android:textColor="@color/blackTextFieldColor"
+                    android:textSize="@dimen/_15ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlInputFour"
+                style="@style/App_OTPEdittextStyle"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+
+                android:maxHeight="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tlInputThree"
+                app:layout_constraintTop_toBottomOf="@id/txt_verification_subtitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tfInputFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_medium"
+                    android:gravity="center_horizontal"
+                    android:inputType="number"
+                    android:maxHeight="@dimen/_50sdp"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:textColor="@color/blackTextFieldColor"
+                    android:textSize="@dimen/_15ssp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVerify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/inter_semi_bold"
+                android:onClick="@{onClick.onClick}"
+                android:text="@string/verify"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tlInputOne" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtResend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/didn_t_receive_the_code_resend"
+                android:textColor="@color/grayFogotPasswordSubTitle"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnVerify" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

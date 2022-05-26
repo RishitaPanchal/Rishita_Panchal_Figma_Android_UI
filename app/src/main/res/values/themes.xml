@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MedicsApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/primaryColor</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Defined a new style with three items of color. -->
+    <style name="splashStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColor</item>
+    </style>
+
+    <!-- EditText style -->
+    <style name="App_EdittextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="background">@color/grayColor</item>
+        <item name="hintTextColor">@color/grayTextColor</item>
+        <item name="boxStrokeColor">@color/edittext_background</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/grayEditTextBackground</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_22sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_22sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_22sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_22sdp</item>
+    </style>
+
+    <!-- OTP Edittext style -->
+    <style name="App_OTPEdittextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="background">@color/grayColor</item>
+        <item name="hintTextColor">@color/grayTextColor</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@color/otp_edittext_background</item>
+        <item name="boxBackgroundColor">@color/grayEditTextBackground</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:gravity">center</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_8sdp</item>
+    </style>
+
+    <!--Button style -->
+    <style name="App_ButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="cornerRadius">@dimen/_20sdp</item>
+        <item name="strokeColor">@color/grayLine</item>
+        <item name="strokeWidth">@dimen/_1sdp</item>
+        <item name="iconTint">@null</item>
+    </style>
+
+    <!-- Custom segment control -->
+    <style name="App_SegmentButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_weight">1</item>
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>
