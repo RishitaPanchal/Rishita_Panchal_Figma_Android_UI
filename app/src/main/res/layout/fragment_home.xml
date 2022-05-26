@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical"
+        tools:context=".home.screen.ui.HomeScreenActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHomeTitle"
+                android:layout_width="@dimen/_179sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/find_your_desire_health_solution"
+                android:textColor="@color/blackHomeTitle"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@null"
+                android:src="@drawable/notification_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtHomeTitle" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/seachView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/searchview_background"
+                app:iconifiedByDefault="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHomeTitle"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/serach_query_hint" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgDoctor"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/category_button_icon"
+                android:src="@drawable/home_category_doctor"
+                app:layout_constraintEnd_toStartOf="@+id/imgPharmacy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seachView" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/doctor"
+                app:layout_constraintEnd_toEndOf="@+id/imgDoctor"
+                app:layout_constraintStart_toStartOf="@+id/imgDoctor"
+                app:layout_constraintTop_toBottomOf="@+id/imgDoctor" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgPharmacy"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/category_button_icon"
+                android:src="@drawable/home_category_pharmacy"
+                app:layout_constraintEnd_toStartOf="@id/imgHospital"
+                app:layout_constraintStart_toEndOf="@id/imgDoctor"
+                app:layout_constraintTop_toTopOf="@+id/imgDoctor" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPharmacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/pharmacy"
+                app:layout_constraintEnd_toEndOf="@id/imgPharmacy"
+                app:layout_constraintStart_toStartOf="@id/imgPharmacy"
+                app:layout_constraintTop_toBottomOf="@id/imgPharmacy" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgHospital"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/category_button_icon"
+                android:src="@drawable/home_category_hospital"
+                app:layout_constraintEnd_toStartOf="@id/imgAmbulance"
+                app:layout_constraintStart_toEndOf="@id/imgPharmacy"
+                app:layout_constraintTop_toTopOf="@id/imgPharmacy" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/hospital"
+                app:layout_constraintEnd_toEndOf="@id/imgHospital"
+                app:layout_constraintStart_toStartOf="@id/imgHospital"
+                app:layout_constraintTop_toBottomOf="@id/imgHospital" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/imgAmbulance"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/category_button_icon"
+                android:src="@drawable/home_category_ambulance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgHospital"
+                app:layout_constraintTop_toTopOf="@id/imgHospital" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAmbulance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/ambulance"
+                app:layout_constraintEnd_toEndOf="@id/imgAmbulance"
+                app:layout_constraintStart_toStartOf="@id/imgAmbulance"
+                app:layout_constraintTop_toBottomOf="@id/imgAmbulance" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:backgroundTint="@color/homeCardBackground"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDoctor">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtCardAd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/early_protection_for_your_family_health"
+                        android:textColor="@color/blackHomeTitle"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/cardImage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/cardImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_card_ad_image"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/round_button"
+                        android:fontFamily="@font/inter_semibold"
+                        android:paddingStart="@dimen/_15sdp"
+                        android:paddingEnd="@dimen/_15sdp"
+                        android:text="@string/learn_more"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintStart_toStartOf="@id/txtCardAd"
+                        app:layout_constraintTop_toBottomOf="@id/txtCardAd" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTopDoctorSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/top_doctor"
+                android:textColor="@color/blackHomeTitle"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@id/recyclerViewTopDoctors"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardViewAdd" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSeeAllDoctor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/see_all"
+                android:onClick="@{onClick::onClick}"
+                app:layout_constraintTop_toTopOf="@+id/txtTopDoctorSection"
+                android:textColor="@color/primaryColor"
+                app:layout_constraintBottom_toBottomOf="@+id/txtTopDoctorSection"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewAdd" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTopDoctors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTopDoctorSection" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtHealthArticles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/health_article"
+                android:textColor="@color/blackHomeTitle"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewTopDoctors" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/see_all"
+                android:textColor="@color/primaryColor"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewTopDoctors"
+                app:layout_constraintTop_toTopOf="@+id/txtHealthArticles" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewArticles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtHealthArticles" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>
