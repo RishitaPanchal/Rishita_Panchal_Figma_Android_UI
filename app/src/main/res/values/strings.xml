@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MedicsApp</string>
+
+    <!-- OnBoarding screen -->
+    <string name="skip">Skip</string>
+    <string name="description">Description</string>
+    <string name="contentdescription">contentDescription</string>
+    <string name="onBoardingTextOne">Consult only with a doctor you trust</string>
+    <string name="onBoardingTextTwo">Find a lot of specialist doctors in one place</string>
+    <string name="onBoardingTextThree">Get connect our Online Consultation</string>
+    <string name="goToSignInActivity">Go to sign in activity</string>
+    <string name="skipClicked">Skip clicked</string>
+
+    <!-- OnBoarding screen -->
+
+</resources>
