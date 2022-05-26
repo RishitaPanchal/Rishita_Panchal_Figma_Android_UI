@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".webservices.httpurlconnection.APISelectorActivity">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetrofit"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:text="Retrofit"
+            android:background="@drawable/round_button"
+            android:onClick="@{onClick.onClick}"
+            android:layout_marginTop="@dimen/_100sdp"
+            app:layout_constraintBottom_toTopOf="@+id/btnHttp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHttp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            android:text="HttpUrlCOnnection"
+            android:onClick="@{onClick.onClick}"
+            android:background="@drawable/round_button"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/btnRetrofit"
+            app:layout_constraintEnd_toEndOf="@id/btnRetrofit"
+            app:layout_constraintStart_toStartOf="@id/btnRetrofit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
