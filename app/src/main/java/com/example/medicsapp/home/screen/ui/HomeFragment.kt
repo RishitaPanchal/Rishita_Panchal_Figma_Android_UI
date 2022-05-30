@@ -2,37 +2,33 @@ package com.example.medicsapp.home.screen.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
+import android.util.Log
 import android.view.View
-import android.view.ViewGroup
-import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.medicsapp.R
-import com.example.medicsapp.databinding.ActivityHomeScreenBinding
+import com.example.medicsapp.base.setup.BaseFragment
+import com.example.medicsapp.base.setup.BaseSetupForSharedPreferences
 import com.example.medicsapp.databinding.FragmentHomeBinding
 import com.example.medicsapp.see.all.doctors.SeeAllDoctorsActivity
+import com.example.medicsapp.sign.`in`.screen.SignInActivity
+import com.example.medicsapp.webservices.httpurlconnection.SignInSignUpViewModel
 
-class HomeFragment : Fragment(), View.OnClickListener {
+class HomeFragment : BaseFragment<FragmentHomeBinding, SignInSignUpViewModel>(FragmentHomeBinding::inflate, SignInSignUpViewModel::class.java), View.OnClickListener {
 
     /** Instance variables */
-    private lateinit var binding: FragmentHomeBinding
     private var topDoctorDetails: ArrayList<TopDoctorsDetails> = ArrayList()
     private var healthArticlesData: ArrayList<HealthArticlesData> = ArrayList()
     var horizontalLayout: LinearLayoutManager? = null
 
     /** Overridden Method */
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.d("Lifecycle", "onViewCreated()")
         initTopDoctorsData()
         setUpDoctorsData()
         initArticlesData()
         setUpArticlesData()
         binding.onClick = this
-        return binding.root
     }
 
     /** Functions */
@@ -45,7 +41,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
     private fun setUpDoctorsData() {
         horizontalLayout = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerViewTopDoctors.layoutManager = horizontalLayout
-        val itemAdapter = TopDoctorsRecyclerViewAdapter(topDoctorDetails)
+        val itemAdapter = TopDoctorsImplementingRecyclerViewAdapter(topDoctorDetails)
         binding.recyclerViewTopDoctors.adapter = itemAdapter
     }
 
@@ -65,6 +61,12 @@ class HomeFragment : Fragment(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0?.id) {
             binding.txtSeeAllDoctor.id -> startActivity(Intent(context, SeeAllDoctorsActivity::class.java))
+            binding.btnNotification.id -> {
+                BaseSetupForSharedPreferences.clearPref(requireContext())
+                requireActivity().run {
+                    startActivity(Intent(this, SignInActivity::class.java))
+                }
+            }
         }
     }
 

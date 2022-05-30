@@ -1,121 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:elevation="@dimen/_2sdp"
-    app:cardCornerRadius="@dimen/_10sdp"
-    android:layout_marginStart="@dimen/_20sdp"
-    android:layout_marginBottom="@dimen/_10sdp"
-    android:layout_marginEnd="@dimen/_20sdp"
-    app:strokeColor="@color/searchViewBackground"
-    app:strokeWidth="@dimen/_1sdp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+
+        <variable
+            name="data"
+            type="com.example.medicsapp.home.screen.ui.TopDoctorsDetails" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="@dimen/_10sdp"
-        android:paddingTop="@dimen/_10sdp"
-        android:paddingBottom="@dimen/_10sdp">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:elevation="@dimen/_2sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:strokeColor="@color/searchViewBackground"
+        app:strokeWidth="@dimen/_1sdp">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgDoctor"
-            android:layout_width="@dimen/_90sdp"
-            android:layout_height="@dimen/_90sdp"
-            android:src="@drawable/doctor_list_img_one"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtDoctorName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:fontFamily="@font/inter_semi_bold"
-            android:text="@string/dr_stevi_jessi"
-            android:textColor="@color/blackHomeTitle"
-            android:textSize="@dimen/_16ssp"
-            app:layout_constraintStart_toEndOf="@+id/imgDoctor"
-            app:layout_constraintTop_toTopOf="@+id/imgDoctor" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDoctor"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:profileImage="@{data.doctorAvatar}" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtDoctorOccupation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/grayDoctorOccupationColor"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/chardiologist"
-            android:textSize="@dimen/_10ssp"
-            app:layout_constraintStart_toStartOf="@+id/txtDoctorName"
-            app:layout_constraintTop_toBottomOf="@+id/txtDoctorName" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDoctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="@string/dr_stevi_jessi"
+                android:textColor="@color/blackHomeTitle"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toEndOf="@+id/imgDoctor"
+                app:layout_constraintTop_toTopOf="@+id/imgDoctor" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardViewStar"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:backgroundTint="@color/homeCardBackground"
-            app:cardCornerRadius="@dimen/_3sdp"
-            app:layout_constraintBottom_toTopOf="@+id/txtDistance"
-            app:layout_constraintStart_toStartOf="@id/txtDoctorOccupation"
-            app:layout_constraintTop_toBottomOf="@id/txtDoctorOccupation">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDoctorOccupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/chardiologist"
+                android:textColor="@color/grayDoctorOccupationColor"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@+id/txtDoctorName"
+                app:layout_constraintTop_toBottomOf="@+id/txtDoctorName" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewStar"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:backgroundTint="@color/homeCardBackground"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:layout_constraintBottom_toTopOf="@+id/txtDistance"
+                app:layout_constraintStart_toStartOf="@id/txtDoctorOccupation"
+                app:layout_constraintTop_toBottomOf="@id/txtDoctorOccupation">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/imageStar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:backgroundTint="@color/white"
-                    android:src="@drawable/star_icon"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/txtStar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_medium"
-                    android:text="@string/_4_7"
-                    android:textColor="@color/primaryColor"
-                    android:textSize="@dimen/_8ssp"
-                    app:layout_constraintBottom_toBottomOf="@id/imageStar"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/imageStar"
-                    app:layout_constraintTop_toTopOf="@id/imageStar" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:backgroundTint="@color/white"
+                        android:src="@drawable/star_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-        </com.google.android.material.card.MaterialCardView>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="@string/_4_7"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="@dimen/_8ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/imageStar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imageStar"
+                        app:layout_constraintTop_toTopOf="@id/imageStar" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgLocation"
-            android:layout_width="@dimen/_12sdp"
-            android:layout_height="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:src="@drawable/location_icon"
-            app:layout_constraintBottom_toBottomOf="@id/imgDoctor"
-            app:layout_constraintStart_toStartOf="@id/cardViewStar"
-            app:layout_constraintTop_toBottomOf="@+id/cardViewStar" />
+            </com.google.android.material.card.MaterialCardView>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtDistance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
-            android:text="@string/_800m_away"
-            android:textColor="@color/grayDoctorOccupationColor"
-            android:textSize="@dimen/_10ssp"
-            app:layout_constraintBottom_toBottomOf="@id/imgLocation"
-            app:layout_constraintStart_toEndOf="@+id/imgLocation"
-            app:layout_constraintTop_toTopOf="@id/imgLocation" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/location_icon"
+                app:layout_constraintBottom_toBottomOf="@id/imgDoctor"
+                app:layout_constraintStart_toStartOf="@id/cardViewStar"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewStar" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="@string/_800m_away"
+                android:textColor="@color/grayDoctorOccupationColor"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="@id/imgLocation"
+                app:layout_constraintStart_toEndOf="@+id/imgLocation"
+                app:layout_constraintTop_toTopOf="@id/imgLocation" />
 
-</com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

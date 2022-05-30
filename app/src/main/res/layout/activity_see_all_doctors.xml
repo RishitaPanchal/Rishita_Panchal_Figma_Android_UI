@@ -8,6 +8,7 @@ xmlns:tools="http://schemas.android.com/tools">
     <variable
         name="onClick"
         type="android.view.View.OnClickListener" />
+
 </data>
 
 <ScrollView

@@ -88,7 +88,7 @@ class SeeAllDoctorsActivity : BaseActivity() {
     private fun setUpDoctorsData() {
         horizontalLayout = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.recyclerViewTopDoctors.layoutManager = horizontalLayout
-        val itemAdapter = SeeAllDoctorsRecyclerAdapter(topDoctorDetails)
+        val itemAdapter = SeeAllDoctorsImplementingRecyclerAdapter(topDoctorDetails)
         binding.recyclerViewTopDoctors.adapter = itemAdapter
     }
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.medicsapp.databinding.ActivityApiselectorBinding
 import com.example.medicsapp.sign.`in`.screen.BaseActivity
+import com.example.medicsapp.sign.`in`.screen.SignInActivity
 import com.example.medicsapp.signn.up.screen.SignUpActivity
 
 class APISelectorActivity : BaseActivity(), View.OnClickListener {
@@ -22,11 +23,11 @@ class APISelectorActivity : BaseActivity(), View.OnClickListener {
         when(p0?.id) {
             binding.btnHttp.id -> {
                 APICallingType = APIServices.RetrofitOrHttpUrlConnection.HttpUrlConnection.name
-                startActivity(Intent(this, SignUpActivity::class.java))
+                startActivity(Intent(this, SignInActivity::class.java))
             }
             binding.btnRetrofit.id -> {
                 APICallingType = APIServices.RetrofitOrHttpUrlConnection.Retrofit.name
-                startActivity(Intent(this, SignUpActivity::class.java))
+                startActivity(Intent(this, SignInActivity::class.java))
             }
         }
     }

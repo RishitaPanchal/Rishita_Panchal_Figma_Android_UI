@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.viewpager2.widget.ViewPager2
 import com.example.medicsapp.R
+import com.example.medicsapp.base.setup.BaseSetupForSharedPreferences
 import com.example.medicsapp.databinding.ActivityOnBoardingScreenBinding
 import com.example.medicsapp.sign.`in`.screen.BaseActivity
-import com.example.medicsapp.sign.`in`.screen.SignInActivity
 import com.example.medicsapp.webservices.httpurlconnection.APISelectorActivity
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -31,7 +31,10 @@ class OnBoardingScreenActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0?.id) {
             binding.btnNext.id -> goNext()
-            binding.btnSkip.id -> startActivity(Intent(this, APISelectorActivity::class.java))
+            binding.btnSkip.id -> {
+                BaseSetupForSharedPreferences.firstRunSession(this)
+                startActivity(Intent(this, APISelectorActivity::class.java))
+            }
         }
     }
 
@@ -57,10 +60,6 @@ class OnBoardingScreenActivity : BaseActivity(), View.OnClickListener {
         )
     }
 
-    private fun gotoSignIn() {
-        startActivity(Intent(this, SignInActivity::class.java))
-    }
-
     private fun attachIndicator() {
         TabLayoutMediator(binding.tabLayout, binding.viewpager) { _, _ ->
         }.attach()
@@ -76,7 +75,8 @@ class OnBoardingScreenActivity : BaseActivity(), View.OnClickListener {
         if ((currPos + 1) != onBoardingData.size) {
             binding.viewpager.currentItem = currPos + 1
         } else {
-           startActivity(Intent(this, APISelectorActivity::class.java))
+            BaseSetupForSharedPreferences.firstRunSession(this)
+            startActivity(Intent(this, APISelectorActivity::class.java))
         }
     }
 
