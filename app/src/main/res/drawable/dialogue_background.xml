@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetTop="@dimen/_5sdp"
+    android:insetBottom="@dimen/_5sdp"
+    android:insetRight="@dimen/_5sdp"
+    android:insetLeft="@dimen/_5sdp">
+
+    <shape android:shape="rectangle">
+        <corners android:radius="@dimen/_20sdp"/>
+        <solid android:color="@color/white"/>
+        <stroke
+            android:width="@dimen/_1sdp"
+            android:color="@color/primarySignupColor"/>
+    </shape>
+
+</inset>

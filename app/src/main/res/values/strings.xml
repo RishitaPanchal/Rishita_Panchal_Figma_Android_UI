@@ -107,4 +107,16 @@
     <string name="group_notification">Group notification</string>
     <string name="push_notification">Push notification</string>
     <string name="download_Completed">Download completed!</string>
+    <string name="registration">Registration</string>
+    <string name="enter_doctor_name">Enter Doctor Name</string>
+    <string name="enter_doctor_ocuupation">Enter Doctor Ocuupation</string>
+    <string name="enter_doctor_s_distance">Enter Doctor\'s Distance</string>
+    <string name="add_doctoe">ADD DOCTOR</string>
+    <string name="list_doctors">List Doctors</string>
+    <string name="update">UPDATE</string>
+    <string name="ok">OK</string>
+    <string name="save">Save</string>
+    <string name="load">Load</string>
+    <string name="crud_oprations_room">CRUD Oprations(ROOM)</string>
+    <string name="save_and_load">Save And Load</string>
 </resources>

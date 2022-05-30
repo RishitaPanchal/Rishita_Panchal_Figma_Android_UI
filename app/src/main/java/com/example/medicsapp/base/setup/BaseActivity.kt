@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
 import com.example.medicsapp.R
+import com.example.medicsapp.room.database.VMFViewModelFactory
 
 abstract class BaseAppActivity<V : ViewBinding, VM : ViewModel>(
     val bindingFactory: (LayoutInflater) -> V,

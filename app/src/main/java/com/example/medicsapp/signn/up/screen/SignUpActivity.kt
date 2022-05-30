@@ -11,6 +11,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.example.medicsapp.R
 import com.example.medicsapp.databinding.ActivitySignUpBinding
+import com.example.medicsapp.room.database.RoomDatabase
 import com.example.medicsapp.sign.`in`.screen.*
 import com.example.medicsapp.webservices.httpurlconnection.APICallingType
 import com.example.medicsapp.webservices.httpurlconnection.SignInSignUpViewModel

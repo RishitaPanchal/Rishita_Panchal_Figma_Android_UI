@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+
+    <variable
+        name="onClick"
+        type="android.view.View.OnClickListener" />
+
+</data>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarThumbHorizontal="@null"
+    tools:context=".room.database.AddDoctorsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".signn.up.screen.SignUpActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_semi_bold"
+                android:textSize="@dimen/_15ssp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlDoctorName"
+            style="@style/App_EdittextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center_vertical"
+            android:hint="@string/password"
+            android:maxHeight="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/user_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_doctor_name"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxHeight="@dimen/_50sdp"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:textSize="@dimen/_12ssp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlDoctorOcuupation"
+            style="@style/App_EdittextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_doctor_ocuupation"
+            android:maxHeight="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tlDoctorName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfDoctorOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/doctor_occupation"
+                android:drawableTint="@color/primaryColor"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_doctor_ocuupation"
+                android:inputType="textEmailAddress"
+                android:maxHeight="@dimen/_50sdp"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_12ssp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlDoctorDistance"
+            style="@style/App_EdittextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:hint="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tlDoctorOcuupation"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfDoctorDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/doctor_location"
+                android:drawableTint="@color/primaryColor"
+                android:drawablePadding="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_doctor_s_distance"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:singleLine="true"
+                android:textSize="@dimen/_12ssp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/inter_semi_bold"
+            android:onClick="@{onClick.onClick}"
+            android:text="@string/add_doctoe"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tlDoctorDistance" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/inter_semi_bold"
+            android:onClick="@{onClick.onClick}"
+            android:text="@string/list_doctors"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/btnAddDoctor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+</layout>
