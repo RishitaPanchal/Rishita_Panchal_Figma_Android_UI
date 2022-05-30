@@ -94,4 +94,17 @@
     <string name="retrofit_error_message">Oops! Something went wrong…</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Notification -->
+    <string name="simple_notification">Simple notification</string>
+    <string name="progress_notification">Progress notification</string>
+    <string name="message_title">Medics App</string>
+    <string name="message_desc">Welcome to medics App!</string>
+    <string name="channel_id">12345</string>
+    <string name="channel_desc">TEST NOTIFICATION</string>
+    <string name="reply_action">Reply</string>
+    <string name="group_notification_message">Message arrived!</string>
+    <string name="group_notification">Group notification</string>
+    <string name="push_notification">Push notification</string>
+    <string name="download_Completed">Download completed!</string>
 </resources>

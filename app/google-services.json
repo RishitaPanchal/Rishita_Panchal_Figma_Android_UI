@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "406335868752",
+    "project_id": "medics-1dac9",
+    "storage_bucket": "medics-1dac9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406335868752:android:b7b526ccfca9260843e655",
+        "android_client_info": {
+          "package_name": "com.example.medicsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406335868752-o27ki88vsp3p01rhdbki9d2m2iqj67pl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAasG1r0fbR26AbcrnQkqAzrLVUE6I0Po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406335868752-o27ki88vsp3p01rhdbki9d2m2iqj67pl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

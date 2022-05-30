@@ -13,7 +13,10 @@
         <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.14791666666666667" />
         <entry key="app/src/main/res/layout/activity_create_password.xml" value="0.115625" />
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.14791666666666667" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_notifications.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_progress_notification.xml" value="0.12864583333333332" />
         <entry key="app/src/main/res/layout/activity_see_all_doctors.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/activity_sign_in_screen.xml" value="0.22" />
@@ -23,6 +26,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.14791666666666667" />
         <entry key="app/src/main/res/layout/health_articles_list_item.xml" value="0.14791666666666667" />
         <entry key="app/src/main/res/layout/item_container_view.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/notification.xml" value="0.15208333333333332" />
         <entry key="app/src/main/res/layout/top_doctors_list_item.xml" value="0.153125" />
       </map>
     </option>
